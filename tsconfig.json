@@ -6,7 +6,7 @@
         "sourceMap": true,
         "jsx": "react",
         "experimentalDecorators": true,
-        "noEmitHelpers": true,
+        "noEmitHelpers": false,
         "allowSyntheticDefaultImports": true
     },
     "exclude": [
