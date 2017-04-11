@@ -8,12 +8,13 @@ console.log("public path is: " + buildpath);
 console.log("+++++++++++++++++++++++++++++++++++++");
 module.exports = {
     entry: {
-        main: [path.join(__dirname, 'src', 'frame','Index.tsx')]
+        bundle: [path.join(__dirname, 'src', 'frame','Index.tsx')],
+        bundle2: [path.join(__dirname, 'src', 'frame','Index.jsx')]
     },
     output: {
         path: buildpath,
         publicPath: "/assets/",
-        filename: 'bundle.js'
+        filename: '[name].js'
     },
     resolve: {
         extensions: ['', '.tsx', '.ts', '.js', '.less', '.css', '.ttf']
@@ -25,12 +26,13 @@ module.exports = {
                 loader: 'ts-loader',
                 include: path.resolve(__dirname, "src")
             },
+            { test: /\.jsx?$/, loader: 'babel-loader',include: path.resolve(__dirname, "src"),query:{presets:['react','es2015']}},
             { test: /\.css$/, loader: "style-loader!css-loader?minimize", include: path.resolve(__dirname, "src") },
             { test: /\.less$/, exclude: /\.module\.less$/, loader: "style-loader!css-loader?minimize!less-loader?compress", include: path.resolve(__dirname, "src") }
         ]
     },
+    devtool:"source-map",
     watch: true,
-    devtool: 'source-map',
     plugins: [
     ]
 

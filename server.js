@@ -18,7 +18,10 @@ var server = new WebpackDevServer(compiler,{
   compress: true,
   publicPath: config.output.publicPath,
   noInfo: false,
-  stats: { colors: true }
+  stats: { colors: true },
+  proxy: {
+    "/api": "http://localhost:9090"
+  },
 
 })
 

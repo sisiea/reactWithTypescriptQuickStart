@@ -1,7 +1,13 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import App from "./App";
 import {Table} from "antd";
 import './App.css';
+
+ReactDOM.render(<App mykey={7}/>,document.getElementById("root1"));
+
+
+
 
 const columns = [{
   title: 'Name',
@@ -90,5 +96,23 @@ ReactDOM.render(
 
 
 
-console.log("hello world");
+// console.log("hello world");
+// interface APPProps{
+//   cat:number,
+//   txt?:string
+// }
+// class APP extends React.Component<APPProps,any>{
+//   public static defaultProps:Partial<APPProps> = {
+//     txt:"some string"
+//   }
+//   render(){
+//     return (
+//       <div>
+//         <h1>cat: {this.props.cat}</h1>
+//         <h1>txt: {this.props.txt}</h1>
+//       </div>
+//     )
+//   }
+// }
 
+// ReactDOM.render(<APP cat={5} />,document.getElementById("root1"));
