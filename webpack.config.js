@@ -8,8 +8,8 @@ console.log("public path is: " + buildpath);
 console.log("+++++++++++++++++++++++++++++++++++++");
 module.exports = {
     entry: {
-        bundle: [path.join(__dirname, 'src', 'frame','Index.tsx')],
-        bundle2: [path.join(__dirname, 'src', 'frame','Index.jsx')]
+        bundle: [path.join(__dirname, 'src', 'Index.tsx')],
+        // bundle2: [path.join(__dirname, 'src', 'Index.jsx')]
     },
     output: {
         path: buildpath,
