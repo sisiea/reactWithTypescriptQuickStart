@@ -5,12 +5,12 @@ import * as $ from "jquery";
 const {myhistory, vrid} = Constant;
 console.log(vrid);
 
-$.ajax({
-    url:"http://localhost:8080/api/total",
-    async:true,
-    success:(data)=>{
-    }
-})
+// $.ajax({
+//     url:"http://localhost:8080/api/total",
+//     async:true,
+//     success:(data)=>{
+//     }
+// })
 
 interface HomeRouteProps extends RouteProps {
     homekey?: any
